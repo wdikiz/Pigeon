@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" target="blank">
-    <img src="https://raw.githubusercontent.com/wdikiz/wdikiz/3b3ef1590e0d58f359ff6105bb0089d6d129b7fb/projects/Logo%20blanc.svg" width="320" alt="Pigeon Logo" />
+    <img src="https://raw.githubusercontent.com/wdikiz/wdikiz/3b3ef1590e0d58f359ff6105bb0089d6d129b7fb/projects/Logo%20blue.svg" width="320" alt="Pigeon Logo Blue" />
   </a>
 </p>
 
