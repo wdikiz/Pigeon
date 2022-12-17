@@ -108,16 +108,14 @@ Tip: Most of the time, you’ll only have to enter an App Password once per app 
 </video> 
 
 <div align="center">
-      <a href="https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/tuto%20pour%20pigeon.mp4">
+      <a href="https://www.youtube.com/watch?v=P4jsLM0Y2q0">
      <img 
-      src="https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/videthub.png" 
+      src="https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/videothumbtn.png" 
       alt="Video tuto" 
       style="width:100%;">
       </a>
     </div>
-
-[![Tutorial]([http://i.imgur.com/7YTMFQp.png](https://raw.githubusercontent.com/wdikiz/wdikiz/3b3ef1590e0d58f359ff6105bb0089d6d129b7fb/assets/videthub.png))](https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/tuto%20pour%20pigeon.mp4 "Video tutorial")
-
+    
 ## Some small technical points used
 
 ```python
