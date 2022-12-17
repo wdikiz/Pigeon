@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +27,7 @@ namespace Pigeon
         //Les élements à executer une fois ce control utilisateur est chargée
         private void SmtpConfigControl_Load(object sender, EventArgs e)
         {
+            
             txtbxIPCnfg.Enabled = true;
             txtbxPassCnfg.Enabled = true;
             txtbxPortCnfg.Enabled = true;
@@ -46,6 +47,16 @@ namespace Pigeon
             txtbxUserCnfg.Text = Properties.Settings.Default.txtbox_user;
             txtbxPortCnfg.Text = Convert.ToString(Properties.Settings.Default.txtbox_port);
             txtbxPassCnfg.Text = Properties.Settings.Default.txtbox_password;
+
+            // retransmttre la configuration de SMTP une fois le user control se lance
+
+            MyThirdUserControl.instance.serviceReceiver.Text = coboxServiceCnfg.Text.ToString();
+            MyThirdUserControl.instance.ipReceiver.Text = txtbxIPCnfg.Text.ToString();
+            MyThirdUserControl.instance.userReceiver.Text = txtbxUserCnfg.Text.ToString();
+            MyThirdUserControl.instance.portReceiver.Text = txtbxPortCnfg.Text.ToString();
+            MyThirdUserControl.instance.passReceiver.Text = txtbxPassCnfg.Text.ToString();
+            MyThirdUserControl.instance.sslReceiver.Checked = chbSSLCnfg.Checked;
+            MyThirdUserControl.instance.authReceiver.Checked = chbAuthCnfg.Checked;
         }
 
         private void labelIP_Click(object sender, EventArgs e)
