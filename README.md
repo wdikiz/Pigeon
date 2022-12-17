@@ -104,8 +104,10 @@ Tip: Most of the time, you’ll only have to enter an App Password once per app 
 
 ## Video tutorial
 
- <video src="https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/tuto%20pour%20pigeon.mp4" controls="controls" muted="muted" playsinline="playsinline"></video> 
+ <video src="https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/tuto%20pour%20pigeon.mp4" controls="controls" muted="muted" playsinline="playsinline">
+</video> 
 
+[![Tutorial]([http://i.imgur.com/7YTMFQp.png](https://raw.githubusercontent.com/wdikiz/wdikiz/3b3ef1590e0d58f359ff6105bb0089d6d129b7fb/assets/videthub.png))](https://raw.githubusercontent.com/wdikiz/wdikiz/main/assets/tuto%20pour%20pigeon.mp4 "Video tutorial")
 
 ## Some small technical points used
 
