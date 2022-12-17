@@ -1,4 +1,4 @@
-﻿
+
 using Microsoft.Win32;
 using MimeKit;
 using System;
@@ -37,6 +37,7 @@ using SmtpClient = System.Net.Mail.SmtpClient;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using System.Runtime.Remoting.Contexts;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 //************************************************************************************************************************************************************************************************
@@ -55,7 +56,7 @@ namespace Pigeon
 
         List<string> colorList = new List<string>();    // cette liste contient les noms de "System.Drawing.Color"
         string filenamee;    
-        string filenamejoindre = "";
+        string filenamejoindre;
         string extensionrtb;
         const int MIDDLE = 382;    
         string titreInputBox = "ajouter adresse mail manuellement";
@@ -414,7 +415,7 @@ namespace Pigeon
         }
 
 
-      //  j'ai créée un methode qui permet d'ouvrir le fichier parceque je dois l'utiliser plusieurs fois
+      //  j'ai créée un methode qui permet d'ouvrir le fichier . Parceque je dois l'utiliser plusieurs fois
         private void OpenfileRTBorNot()
         {
 
@@ -1123,17 +1124,19 @@ namespace Pigeon
                     string body = richTextBox1.Text;
                     AlternateView htmlView = AlternateView.CreateAlternateViewFromString(body);  // en alterative envoyer msg en format HTML
                     MailMessage mailfinal = new MailMessage();
-                mailfinal.From = new System.Net.Mail.MailAddress(txtbxuserHide.Text, TxtBoxExpiditeur.Text); // l'expiditeur de mail utilsiteur + l'expiditeur 
+                mailfinal.From = new MailAddress(txtbxuserHide.Text, TxtBoxExpiditeur.Text); // l'expiditeur de mail utilsiteur + l'expiditeur 
                 mailfinal.Subject = textBoxObjet.Text;             // lobjet de mail
                 mailfinal.IsBodyHtml = true;                       //Accepte le corp de message en HTML
                 mailfinal.BodyEncoding = System.Text.Encoding.UTF8; // l'encodage de UTF8 pour aussi les autres langue ( ex arabe)
               mailfinal.AlternateViews.Add(htmlView);
               mailfinal.Body = richTextBox1.Text;
-                mailfinal.To.Add(email);
-                    
-          // Protocle pour que le service (ex Google smtp) securise le trasfer de l'email
-                {
-                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
+                mailfinal.To.Add((new MailAddress(email)));
+
+                    // ancien  mailfinal.To.Add(email);
+
+                    // Protocle pour que le service (ex Google smtp) securise le trasfer de l'email
+                    {
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
                                                       | SecurityProtocolType.Tls11
                                                       | SecurityProtocolType.Tls12;
                 }
@@ -1147,8 +1150,11 @@ namespace Pigeon
                 smtpClient.EnableSsl = true; // par default c'est toujour activé sinon le mail sera envoyé et reçu ne SPAM
 
 
-                Attachment atc = new Attachment(filenamejoindre); 
-                mailfinal.Attachments.Add(atc);
+                    if (!string.IsNullOrEmpty(filenamejoindre))
+                    {
+                        mailfinal.Attachments.Add(new Attachment(filenamejoindre));
+                    }
+   
                     smtpClient.Send(mailfinal); // FINALEMENT ENVOYER LE MESSAGE
             }
 
