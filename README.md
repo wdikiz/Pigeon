@@ -16,16 +16,15 @@ The main objective of this project is to <strong>meet the need of users in proce
 
 ## Features and strengths
 
-1. Features and strengths
-2. Supports custom message content
-3. Support Richetexte format
-4. Support many SMTP service provider
-5. Supports message editing, previewing, message management
-6. Support for importing users via files (txt, excel, csv(soon))
-7. Small and beautiful visual interface, support various light and dark appearance styles
-8. Support global font size setting
-9. Supports Basic Authentication to SMTP server
-10. Supports Anonymous connection to SMTP Server
+1. Supports custom message content
+2. Support Richetexte format
+3. Support many SMTP service provider
+4. Supports message editing, previewing, message management
+5. Support for importing users via files (txt, excel, csv(soon))
+6. Small and beautiful visual interface, support various light and dark appearance styles
+7. Support global font size setting
+8. Supports Basic Authentication to SMTP server
+9. Supports Anonymous connection to SMTP Server
 
 
 ## Captures d'écran
