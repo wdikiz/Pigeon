@@ -12,7 +12,7 @@
 
 ## Goals
 
-L'objectif principal de ce projet est de <strong>est répondre au besoin des utilisateurs en matière de traitement et envoie des mails.</strong> **En principe, le projet, c'est un projet qui s'inscrit dans le cursus scolaire et l'utilisateur sera principalement une école primaire**.
+The main objective of this project is to <strong>meet the need of users in processing and sending emails.</strong> **In principle, the project, it is a project that is part of the school curriculum and the user will be mainly a primary school**.
 
 ## Features and strengths
 
