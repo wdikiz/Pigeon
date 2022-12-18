@@ -27,7 +27,7 @@ The main objective of this project is to <strong>meet the need of users in proce
 9. Supports Anonymous connection to SMTP Server
 
 
-## Captures d'écran
+## Screenshots
 
 <br>
 
